@@ -1,0 +1,20 @@
+.foot-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff21; /* semi-transparent white for a modern look */
+  backdrop-filter: blur(8px); /* glass effect */
+  border-top: 1px solid rgba(0,0,0,0.08);
+  padding: 15px 5px;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+  font-size: 14px;
+    color: #444;
+    text-align: center;
+}
+
+body.dark .foot-container {
+  background: #00000040; /* semi-transparent black */
+  backdrop-filter: blur(8px);
+  color: #e5e7eb; /* light gray text */
+}

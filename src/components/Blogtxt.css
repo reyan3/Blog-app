@@ -1,0 +1,215 @@
+.blogedit {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  animation: zoom 0.4s ease-in-out;
+}
+
+.blogedit:hover {
+  transform: translateY(-3px);
+}
+
+/* Title Input */
+.blogedit .title {
+  padding: 14px 16px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.blogedit .title:focus {
+  border-color: #4f46e5;
+  /* Indigo */
+  box-shadow: 0 0 10px rgba(79, 70, 229, 0.25);
+  outline: none;
+}
+
+/* Content Area */
+.blogedit .content {
+  min-height: 80px;
+  padding: 14px 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.blogedit .content:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 12px rgba(79, 70, 229, 0.25);
+  outline: none;
+}
+
+/* Submit Button */
+.blogedit button {
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.blogedit button:hover {
+  background: linear-gradient(135deg, #4338ca, #4f46e5);
+  transform: translateY(-2px);
+}
+
+.blogedit button:active {
+  transform: scale(0.98);
+}
+
+.blogedit .category {
+  padding: 8px 10px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: #fff;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.blogedit .category:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 10px rgba(79, 70, 229, 0.25);
+  outline: none;
+}
+
+.blogedit input[type="file"] {
+  padding: 8px;
+  font-size: 0.9rem;
+}
+
+.image-preview {
+  margin-top: 10px;
+  justify-content: center;
+  gap: 10px;
+  display: flex;
+}
+
+.image-preview img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.Deletefuncn {
+  display: flex;
+  font-size: large;
+  align-items: center;
+  opacity: 0.7;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.Deletefuncn:hover {
+  transform: rotate(90deg) scale(1.1);
+}
+
+.err-message {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fca5a5;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  animation: shake 0.3s ease-in-out;
+}
+
+.blog-posted {
+  background: linear-gradient(135deg, #4caf50, #2e7d32); /* green gradient */
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-align: center;
+  width: fit-content;
+  margin: 15px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: fixed;
+    right: 0vw;
+    left: 86vw;
+    bottom: 60px;
+  /* Smooth fade-in */
+ animation: slideFade 1s ease forwards;
+}
+
+/* Dark mode blog editor container */
+body.dark .blogedit {
+  background: #1f2937; /* Dark slate */
+  color: #f3f4f6;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Inputs (title, content, category, file input) */
+body.dark .blogedit .title,
+body.dark .blogedit .content,
+body.dark .blogedit .category,
+body.dark .blogedit input[type="file"] {
+  background: #111827;
+  border: 2px solid #374151;
+  color: #e5e7eb;
+}
+
+body.dark .blogedit .title:focus,
+body.dark .blogedit .content:focus,
+body.dark .blogedit .category:focus {
+  border-color: #818cf8; /* soft indigo */
+  box-shadow: 0 0 10px rgba(129, 140, 248, 0.35);
+}
+
+/* Delete icon */
+body.dark .Deletefuncn {
+  color: #fca5a5;
+}
+body.dark .Deletefuncn:hover {
+  color: #f87171;
+}
+
+/* Error messages */
+body.dark .err-message {
+  background: #7f1d1d;
+  color: #fecaca;
+  border: 1px solid #f87171;
+}
+
+
+/* Subtle shake animation for attention */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  75% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .blogedit {
+    margin: 0;
+    padding: 83px 25px;
+  }
+}

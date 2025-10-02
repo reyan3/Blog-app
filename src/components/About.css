@@ -1,0 +1,39 @@
+.about-section {
+  max-width: 920px;
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  align-items: center;
+  animation: zoom 0.4s ease-in-out;
+}
+
+.about-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  animation: header 0.5s ease;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.8;
+}
+
+.about-image img {
+  width: 100%;
+  opacity: 0.8;
+}
+
+body.dark .about-text h1 {
+  color: #f3f4f6; /* light heading */
+}
+
+body.dark .about-text p {
+  color: #d1d5db; /* lighter gray text */
+}
+
+body.dark .about-image img {
+  opacity: 0.9; /* make image stand out more */
+  filter: brightness(0.9) contrast(1.1);
+}
