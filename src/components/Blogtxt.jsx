@@ -51,7 +51,11 @@ const Blogtxt = ({ onSave }) => {
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      setCoverImage(URL.createObjectURL(file)); // for preview
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onloadend = () => {
+        setCoverImage(reader.result); // Base64 string for Persists the image
+      };
     }
   };
 
