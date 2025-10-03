@@ -22,7 +22,7 @@ Create, view, and manage posts with local persistence, dark mode, and a clean UI
 ## 📸 Screenshots
 
 ### Home Page
-<img width="1000" height="903" alt="Screenshot 2025-10-03 113157" src="https://github.com/user-attachments/assets/eaca0370-305e-4a5e-86d6-0118a9559198" />
+<img width="600" height="903" alt="Screenshot 2025-10-03 113157" src="https://github.com/user-attachments/assets/eaca0370-305e-4a5e-86d6-0118a9559198" />
 
 ### Create Post
 <img width="1000" height="898" alt="Screenshot 2025-10-03 113206" src="https://github.com/user-attachments/assets/3b2a477a-47c6-45ea-9f79-e6dcc56982c8" />
